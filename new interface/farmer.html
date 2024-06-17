@@ -1,0 +1,214 @@
+<?php
+session_start();
+include("classes/connect.php");
+include("classes/log-in.php");
+include("classes/users_data.php");
+
+// Check if the user is logged in
+if (isset($_SESSION['users_id']) && is_numeric($_SESSION['users_id'])) {
+
+    $id = $_SESSION['users_id'];
+    $login = new login();
+    $result = $login->check_login($id);
+
+    if (is_array($result) && array_key_exists('error', $result)) {
+        // Handle the error case
+        echo "Error: " . $result['error'];
+    } elseif ($result) {
+        $type = $result['type'];
+
+        if ($type === 'farmer') {
+
+          $users = new users_data();
+          $users_d = $users -> get_farmer_data($id);
+
+          if(!$users_d){
+            header("Location: log-in.php");
+            die;
+          }
+        } 
+        elseif ($type === 'veterinary') {
+
+            header("Location: VeterinaryProfile.php");
+            die;
+        }
+        else {
+            echo "Unknown user type!";
+        }
+    } 
+    else {
+        header("Location: log-in.php");
+        die;
+    }
+} else {
+    header("Location: log-in.php");
+    die;
+}
+
+?>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dashboard</title>
+    <link rel="stylesheet" href="../css/all.min.css" />
+    <link rel="stylesheet" href="farmer.css" />
+    <link rel="stylesheet" href="logout.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;500&#038;display=swap" rel="stylesheet" />
+</head>
+<body>
+    <div class="page ">
+        
+        <div class="sidebar">
+            <div class="fix-sidebar">
+                <h3 class="title">FarmVet</h3>
+                <ul>
+                    <li>
+                    <a class="active" href="index.html">
+                        <i class="fa-solid fa-house fa-fw"></i>
+                        <span>Home</span>
+                    </a>
+                    </li>
+                    <li>
+                    <a class="" href="profile.html">
+                        <i class="fa-regular fa-user fa-fw"></i>
+                        <span>Profile</span>
+                    </a>
+                    </li>
+                    <li>
+                    <a class="" href="projects.html">
+                        <i class="fa-solid fa-user-doctor fa-fw"></i>
+                        <span>veterinarians</span>
+                    </a>
+                    </li>
+                    <li>
+                    <a class="" href="messages.html">
+                        <i class="fa-solid fa-comments fa-fw"></i>
+                        <span>Messages</span>
+                    </a>
+                    </li>
+                    <li>
+                    <a class="" href="store.html">
+                        <i class="fa-solid fa-comments fa-fw"></i>
+                        <span>Store</span>
+                    </a>
+                    </li>
+                    <li>
+                    <a class="" href="contact.html">
+                        <i class="fa-solid fa-envelope fa-fw"></i>
+                        <span>Contact Us</span>
+                    </a>
+                    </li>
+                </ul>
+                <div class="box">
+                    <img src="../imgs/skills-02.jpg" alt="">
+                    <div class="info">
+                        <span>@<?php echo $users_d['firstn'] . $users_d['lastn'] ?>
+                            <br>
+                            <p>Farmer</p>
+                        </span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    
+        <div class="content">
+
+        <div class="box1">
+            
+            <div class="head-box">
+                <div class="title">
+                    <span class="active">For You</span>
+                    <span>Contact Us</span>
+                    <span class="notification">
+                        <i class="fa-regular fa-bell fa-lg"></i>
+                    </span>
+                </div>
+            </div>
+            <div class="body-box">
+                <div class="post">
+                    <div class="text">
+                        <img src="../imgs/skills-01.jpg" alt="">
+                        <div class="input-field">
+                            <input required="" name="text" type="text" />
+                            <label>What's new ?</label>
+                        </div>
+                    </div>
+                    <div class="posting">
+                        <div class="icons">
+                            <div class="input-div">
+                                <input type="file">
+                            </div>
+                            <i class="fa-solid fa-face-smile-beam"></i>
+                        </div>
+                        <div class="button">
+                            <a href="">Share</a>
+                        </div>
+
+                    </div>
+                </div>
+                <div class="post-list">
+                    <div class="info">
+                        <img src="../imgs/skills-01.jpg" alt="">
+                        <span> @<?php echo $users_d['firstn'] . " " . $users_d['lastn'] ?> 
+                            <br><p>Farmer</p>
+                        </span>
+                        <p>12oct 2024</p>
+                    </div>
+                    <div class="text">
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis, nemo excepturi repellat suscipit error veniam corrupti eos asperiores ab obcaecati sint deleniti ipsam earum.</p>
+                    </div>
+                    <div class="image">
+                        <img src="../imgs/pexels-eline-spee-19288076.jpg" alt="">
+                    </div>
+                    <div class="icons">
+                        <i class="fa-regular fa-heart"></i>
+                        <i class="fa-regular fa-comment"></i>
+                    </div>
+                </div>
+                <div class="post-list">
+                    <div class="info">
+                        <img src="../imgs/skills-01.jpg" alt="">
+                        <span> @name 
+                            <br><p>Farmer</p>
+                        </span>
+                        <p>12oct 2024</p>
+                    </div>
+                    <div class="text">
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis, nemo excepturi repellat suscipit error veniam corrupti eos asperiores ab obcaecati sint deleniti ipsam earum.</p>
+                    </div>
+                    <div class="image">
+                        <img src="../imgs/pexels-eline-spee-19288076.jpg" alt="">
+                    </div>
+                    <div class="icons">
+                        <i class="fa-regular fa-heart"></i>
+                        <i class="fa-regular fa-comment"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="box2">
+            <div class="head-box">
+                <div class="search ">
+                    <input class="p-10" type="search" placeholder="Type A Keyword" />
+                    <button class="Btn">
+                        <div class="sign"><svg viewBox="0 0 512 512"><path d="M377.9 105.9L500.7 228.7c7.2 7.2 11.3 17.1 11.3 27.3s-4.1 20.1-11.3 27.3L377.9 406.1c-6.4 6.4-15 9.9-24 9.9c-18.7 0-33.9-15.2-33.9-33.9l0-62.1-128 0c-17.7 0-32-14.3-32-32l0-64c0-17.7 14.3-32 32-32l128 0 0-62.1c0-18.7 15.2-33.9 33.9-33.9c9 0 17.6 3.6 24 9.9zM160 96L96 96c-17.7 0-32 14.3-32 32l0 256c0 17.7 14.3 32 32 32l64 0c17.7 0 32 14.3 32 32s-14.3 32-32 32l-64 0c-53 0-96-43-96-96L0 128C0 75 43 32 96 32l64 0c17.7 0 32 14.3 32 32s-14.3 32-32 32z"></path></svg></div>
+                        <a href="logout.php" class="text" >Logout</a>
+                    </button>
+                </div>
+            </div>
+
+        </div>
+        
+        </div>
+    </div>
+    
+
+</body>
+</html>

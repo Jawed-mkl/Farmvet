@@ -1,0 +1,173 @@
+/* Start Variables */
+:root {
+    --main-color: #22c55e;
+    --main-alt-color: #188a5c;
+    --theered-color: #c59522;
+    --white-color: white;
+    --forp-color: #777;
+    --main-transition: 0.3s;
+    --section-padding: 100px;
+}
+
+body {
+    direction: rtl;
+}
+
+.p1 .container .text {
+    margin-left: 40px;
+}
+.p1 .container .text h2 {
+    border-left: none;
+    border-right: 3px solid var(--theered-color);
+    padding-right: 20px;
+}
+
+.p2 .container .main-box {
+    margin-left: 0;
+}
+
+.video .text {
+    direction: rtl;
+}
+
+.veterinary .container .text h2 {
+    border-left: none;
+    border-right: 3px solid var(--theered-color);
+    padding-right: 30px;
+}
+.veterinary .container .text .percents .percent:first-child {
+    margin-left: 50px;
+    margin-right: 0;
+}
+
+.portfolio .txt {
+    border-left: none;
+    border-right: 3px solid var(--theered-color);
+    padding-right: 35px;
+}
+.portfolio .box img {
+    left: -20px;
+    right: auto;
+}
+.portfolio .box h2 {
+    margin: 0 0px 10px 40px;
+}
+.fa-angle-right:before {
+    content: "\f104";
+}
+
+.product .text {
+    border-left: none;
+    border-right: 3px solid var(--theered-color);
+    padding-right: 30px;
+}
+.product .text > p {
+    margin-right: 0;
+    padding: 0;
+}
+.product p {
+    padding-right: 0;
+}
+
+.contact .txt {
+    border-left: none;
+    border-right: 3px solid var(--theered-color);
+    padding-right: 30px;
+}
+.contact .location {
+    margin-right: 50px;
+    margin-left: 0;
+}
+
+.footer .container .copyright p {
+    direction: ltr;
+}
+
+
+@media(max-width: 767px){
+    body {
+        direction: ltr;
+        position: absolute;
+        left: 0;
+        width: 450px;
+    }
+    .header .container {
+        direction: ltr;
+        width: 450px;
+    }
+    .special-box {
+        margin-left: -15px;
+    }
+    .language-selected {
+        margin-left: 40px;
+    }
+    .language-selected::before{
+        content: none;
+    }
+    .language-selected::after {
+        font-family: "Font Awesome 5 Free";
+        content: "\f0ac";
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 25px;
+        height: 25px;
+        margin-left: 10px;
+        color: black;
+    }
+
+    .p1 {
+        direction: rtl;
+        padding-top: 25px;
+        text-align: center;
+    }
+    .p1 .container .text {
+        margin-left: 0;
+    }
+
+    .p2 {
+        text-align: center;
+        direction: rtl;
+    }
+    .p2 .container .main-box {
+        margin: 0;
+    }
+
+    .veterinary .container .text {
+        margin-left: 0;
+    }
+
+    .portfolio {
+        direction: rtl;
+    }
+    .portfolio .txt {
+        margin: 100px 25px 0 0;
+    }
+
+    .faq {
+        direction: rtl;
+    }
+    .faq .container .text {
+        margin-right: 0;
+    }
+
+    .product {
+        direction: rtl;
+    }
+    .product .text {
+        margin-right: 25px;
+    }
+    .product p {
+        margin-right: 15px;
+    }
+    .product .container {
+        padding: 0;
+        margin: 0 auto;
+        width: fit-content;
+    }
+
+    .contact .txt {
+        direction: rtl;
+        margin-right: 25px;
+    }
+}

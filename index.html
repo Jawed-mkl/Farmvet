@@ -1,0 +1,539 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title> Farm Vet </title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Render All Elements Normally -->
+    <link rel="stylesheet" href="css/normalize.css" />
+    <!-- Font Awesome Library -->
+    <link rel="stylesheet" href="css/all.min.css" />
+    <!-- Main Template CSS File -->
+    <link rel="stylesheet" href="css/index.css" />
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&#038;display=swap" rel="stylesheet" />
+</head>
+<body>
+    <!-- Start Header -->
+    <div class="header">
+        <div class="container">
+
+            <a href="#" class="logo">
+                <img id="img1" src="imgs/Farmvetlogo_white.png" alt="">
+                <img id="img2" src="imgs/Farmvetlogo.png" alt="">
+            </a>
+
+            <div class="main-box">
+                <i class="fas fa-bars toggle-menu"></i>
+                <ul class="main-nav">
+                    <li> <a href="#landing" data-i18n="home">Home</a> </li>
+                    <li> <a href="#portfolio" data-i18n="veterinarian">Veterinarian</a> </li>
+                    <li> <a href="#faq" data-i18n="faq">FAQ</a> </li>
+                    <li> <a href="#contact" data-i18n="contact">Contact us</a> </li> 
+                </ul>
+                
+
+                <div class="language">
+                    <div class="language-selected" data-i18n="language">
+                        Language
+                    </div>
+                    <ul>
+                        <li><a href="#" class="en" onclick="changeLanguage('en')" data-i18n="en" selected>English</a></li>
+                        <li><a href="#" class="fr" onclick="changeLanguage('fr')" data-i18n="fr">French</a></li>
+                        <li><a href="#" class="ar" onclick="changeLanguage('ar')" data-i18n="ar">Arabic</a></li>
+                    </ul>
+                </div>
+                
+
+                
+                <button>
+                    <a href="log-in.php" class="special-box" data-i18n="sign">Sign in</a>
+                </button> 
+            </div>
+        </div>
+    </div>
+    <!-- End Header -->
+
+    <!-- Start Landing -->
+    <div class="landing" id="landing">
+        <div class="container">
+            <div class="text">
+                <h1 data-i18n="welcom">Welcome, To FarmVet World</h1>
+                <p data-i18n="welcom_txt">Find the right veterinary now, for optimal livestock health and agricultural productivity.</p>
+            </div>
+            <div class="image">
+                <img src="imgs/pexels-vitalina-19392658.jpg" alt="">
+            </div>
+        </div>
+        <a href="#p1" class="go-down">
+            <i class="fas fa-angle-double-down fa-2x"></i>
+        </a>
+    </div>
+    <!-- End Landing-->
+
+    <!-- Start p1 -->
+    <div class="p1" id="p1">
+        <div class="container">
+            <div class="text">
+                <h2 data-i18n="Empowering">Empowering Farmers and Veterinarians to safeguard Farm Animal Health</h2>
+                <p data-i18n="Empowering_p">Our feature section highlights the critical role of monitoring and
+                    controllinginfectious diseases in farm animals. By linking farmers and
+                    veterinarians, weenable them to collaborate on disease prevention, health care, vaccinations,
+                    and animal nutrition.</p>
+                <div class="boxs">
+
+                    <p data-i18n="Monitoring">Monitoring and Controlling Infectious Diseases</p>
+                </div>
+                <div class="boxs">
+
+                    <p data-i18n="Health">Health Care for Farm Animals</p>
+                </div>
+                <div class="boxs">
+
+                    <p data-i18n="Expert">Expert Advice on Animal Nutrition </p>
+                </div>
+            </div>
+            <div class="image">
+                <img src="imgs/chikens.jpg" alt="">
+            </div>
+        </div>
+
+    </div>
+    <!-- End p1 -->
+
+    <!-- Start p2 -->
+    <div class="p2">
+        <div class="container">
+            <div class="image">
+                <img src="imgs/rabbits.jpg" alt="">
+            </div>
+            <div class="main-box">
+                <div class="boxs">
+                    <h2 class="special" data-i18n="rthm">Real-time Health Monitoring</h2>
+                    <p data-i18n="provides">Farmvet provides real-time health monitoring for your animals, allowing you totrack their
+                        well-being and detect any potential issues early on. Stay informedand
+                        take proactive measures to ensure the health and safety of your livestock.</p>
+                </div>
+                <div class="boxs">
+                    <h2 data-i18n="disease">Disease Control</h2>
+                    <p data-i18n="diseases_p">With Farmvet, you have the power to control diseases on your farm. Ourplatform helps you identify
+                        and manage diseases, providing you with thenecessary tools and
+                        resources to prevent outbreaks and minimize the impact onyour animals.</p>
+                </div>
+                <div class="boxs">
+                    <h2 data-i18n="rapid_vet">Rapid Veterinary Intervention</h2>
+                    <p data-i18n="rapid_vet_p">In case of emergencies, Farmvet enables you to quickly connect with veterinaryprofessionals. Our
+                        platform facilitates rapid intervention, ensuring that youranimals
+                        receive timely and appropriate medical care when they need it the most </p>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+    <!-- End p2 -->
+
+    <!-- Start video -->
+    <div class="video">
+        <video autoplay muted loop>
+            <source src="imgs/video (2160p).mp4" type="video/mp4">
+        </video>
+        <div class="text">
+            <h2 data-i18n="nrm">Nutrition and <br> Reproductive <br> Management Solutions</h2>
+            <div class="boxs">
+                <p data-i18n="nrm_p">Our team of experts provides valuable advice and solutions for animal nutrition and reproductive
+                    management. From optimizing diets to enhancing breeding programs,
+                    we help farmers maximize the health and productivity of their animals</p>
+                <div class="btn">
+                    <button data-i18n="learn">Learn More</button>
+                    <a href="sign-in.html" data-i18n="signup">Sign Up</a>
+                    <i class="fa-solid fa-angle-right"></i>
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <!-- End video -->
+
+    <!-- Start veterinary -->
+    <div class="veterinary">
+        <div class="container">
+            <div class="text">
+                <h2 data-i18n="connecting">Connecting with veterinarians made easy through the Farmvet platform</h2>
+                <p data-i18n="connecting_p">With Farmvet, you can easily connect with veterinarians to monitor animal health and control
+                    diseases.</p>
+                <div class="percents">
+                    <div class="percent">
+                        <h2>50%</h2>
+                        <p data-i18n="percent1">Monitor animal health, control diseases, and get expert advice.</p>
+                    </div>
+                    <div class="percent">
+                        <h2>50%</h2>
+                        <p data-i18n="percent2">Benefit from the intervention of a highly qualified veterinarian as soon as possible </p>
+                    </div>
+                </div>
+            </div>
+            <div class="image">
+                <img src="imgs/chiken.jpg" alt="">
+            </div>
+        </div>
+    </div>
+    <!-- End veterinary -->
+
+    <!-- Start portfolio -->
+    <div class="portfolio" id="portfolio">
+        <div class="txt">
+            <p data-i18n="connect">Connecting</p>
+            <h2 data-i18n="expert">Our Experts</h2>
+            <p data-i18n="expert_p">Meet our team of expert veterinarians and support staff</p>
+        </div>
+        <div class="container">
+            <div class="box">
+                <img src="imgs/vet.jpg" alt="">
+                <h2>Ismail mohamed</h2>
+                <span class="title" data-i18n="veterinarian">Veterinarian</span>
+                <span class="rate">
+                    <i class="filled fas fa-star"></i>
+                    <i class="filled fas fa-star"></i>
+                    <i class="filled fas fa-star"></i>
+                    <i class="filled fas fa-star"></i>
+                    <i class="far fa-star"></i>
+                </span>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores et reiciendis voluptatum,</p>
+                <div class="info">
+                    <a href="" data-i18n="read">Read More</a>
+                </div>
+            </div>
+            <div class="box">
+                <img src="imgs/vet.jpg" alt="">
+                <h2>Mohamed Ibrahim</h2>
+                <span class="title" data-i18n="veterinarian">Veterinarian</span>
+                <span class="rate">
+                    <i class="filled fas fa-star"></i>
+                    <i class="filled fas fa-star"></i>
+                    <i class="filled fas fa-star"></i>
+                    <i class="filled fas fa-star"></i>
+                    <i class="filled fas fa-star"></i>
+                </span>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores et reiciendis voluptatum,</p>
+                <div class="info">
+                    <a href="" data-i18n="read">Read More</a>
+                </div>
+            </div>
+            <div class="box">
+                <img src="imgs/vet.jpg" alt="">
+                <h2>Mohamed Ahmed</h2>
+                <span class="title" data-i18n="veterinarian">Veterinarian</span>
+                <span class="rate">
+                    <i class="filled fas fa-star"></i>
+                    <i class="filled fas fa-star"></i>
+                    <i class="filled fas fa-star"></i>
+                    <i class="filled fas fa-star"></i>
+                    <i class="filled fas fa-star"></i>
+                </span>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores et reiciendis voluptatum,</p>
+                <div class="info">
+                    <a href="" data-i18n="read">Read More</a>
+                </div>
+            </div>
+            <div class="box">
+                <img src="imgs/vet.jpg" alt="">
+                <h2>khaleed kachmiri</h2>
+                <span class="title" data-i18n="veterinarian">Veterinarian</span>
+                <span class="rate">
+                    <i class="filled fas fa-star"></i>
+                    <i class="filled fas fa-star"></i>
+                    <i class="filled fas fa-star"></i>
+                    <i class="filled fas fa-star"></i>
+                    <i class="filled fas fa-star"></i>
+                </span>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores et reiciendis voluptatum,</p>
+                <div class="info">
+                    <a href="" data-i18n="read">Read More</a>
+                </div>
+            </div>
+            <div class="box">
+                <img src="imgs/vet.jpg" alt="">
+                <h2>Ahmeed Dibyaza</h2>
+                <span class="title" data-i18n="veterinarian">Veterinarian</span>
+                <span class="rate">
+                    <i class="filled fas fa-star"></i>
+                    <i class="filled fas fa-star"></i>
+                    <i class="filled fas fa-star"></i>
+                    <i class="far fa-star"></i>
+                    <i class="far fa-star"></i>
+                </span>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores et reiciendis voluptatum,</p>
+                <div class="info">
+                    <a href="" data-i18n="read">Read More</a>
+                </div>
+            </div>
+            <div class="box">
+                <img src="imgs/vet.jpg" alt="">
+                <h2>Mohamed Sonbol</h2>
+                <span class="title" data-i18n="veterinarian">Veterinarian</span>
+                <span class="rate">
+                    <i class="filled fas fa-star"></i>
+                    <i class="filled fas fa-star"></i>
+                    <i class="filled fas fa-star"></i>
+                    <i class="far fa-star"></i>
+                    <i class="far fa-star"></i>
+                </span>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores et reiciendis voluptatum,</p>
+                <div class="info">
+                    <a href="" data-i18n="read">Read More</a>
+                </div>
+            </div>
+            <div class="box">
+                <img src="imgs/vet.jpg" alt="">
+                <h2>Ismaiil mohamed</h2>
+                <span class="title" data-i18n="veterinarian">Veterinarian</span>
+                <span class="rate">
+                    <i class="filled fas fa-star"></i>
+                    <i class="filled fas fa-star"></i>
+                    <i class="filled fas fa-star"></i>
+                    <i class="filled fas fa-star"></i>
+                    <i class="far fa-star"></i>
+                </span>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores et reiciendis voluptatum,</p>
+                <div class="info">
+                    <a href="" data-i18n="read">Read More</a>
+                </div>
+            </div>
+            <div class="box">
+                <img src="imgs/vet.jpg" alt="">
+                <h2>Ismaiil mohamed</h2>
+                <span class="title" data-i18n="veterinarian">Veterinarian</span>
+                <span class="rate">
+                    <i class="filled fas fa-star"></i>
+                    <i class="filled fas fa-star"></i>
+                    <i class="filled fas fa-star"></i>
+                    <i class="filled fas fa-star"></i>
+                    <i class="far fa-star"></i>
+                </span>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores et reiciendis voluptatum,</p>
+                <div class="info">
+                    <a href="" data-i18n="read">Read More</a>
+                </div>
+            </div>
+
+        </div>
+        <div class="btn">
+            <button data-i18n="learn">View More</button>
+            <a href="" data-i18n="join">Join US</a>
+            <i class="fa-solid fa-angle-right"></i>
+        </div>
+    </div>
+    <!-- End portfolio -->
+
+    <!-- Start FAQ -->
+    <div class="faq" id="faq">
+        <div class="container">
+            <div class="text">
+                <h1 class="italic">Farmvet</h1>
+                <p data-i18n="fm_p">learn how Farmvet works and the Benefits it provides for farmers and veterinarians </p>
+                <button data-i18n="contact">Contact Us</button>
+            </div>
+            <div class="box">
+                <div class="box-txt">
+                    <h3 data-i18n="Q1">How does Farmvet work?</h3>
+                    <p data-i18n="answr1"> Farmvet acts as a point of contact between farmers and veterinarians,
+                        allowing them to monitor the health of animals, combat diseases, and
+                        intervene quickly, and helps them stay informed of the latest epidemics,
+                        medicines, and news in the field. In addition, it connects veterinarians with
+                        suppliers and pharmaceutical companies.</p>
+                </div>
+                <div class="box-txt">
+                    <h3 data-i18n="Q2">What are the benefits of Farmvet?</h3>
+                    <p data-i18n="answr2">Farmvet provides farmers with easy access to veterinary services, helping them
+                        keep their animals healthy and prevent the spread of diseases. It also
+                        provides a convenient online store for veterinarians that enables them to
+                        purchase all essential medications and tools to help them perform their work</p>
+                </div>
+                <div class="box-txt">
+                    <h3 data-i18n="Q3">How can I contact Farmvet?</h3>
+                    <p data-i18n="answr3"> For any queries or assistance, you can contact our Farmvet support team through
+                        Our contact page.</p>
+                </div>
+                <div class="box-txt">
+                    <h3 data-i18n="Q4">Can I get veterinary advice?</h3>
+                    <p data-i18n="answr4">Yes. Farmvet provides farmers with access to veterinary advice and guidance to ensure
+                        the health of their animals</p>
+                </div>
+                <div class="box-txt">
+                    <h3 data-i18n="Q5">How can I buy medicines?</h3>
+                    <p data-i18n="answr5">Farmvet offers an easy-to-use online store for veterinarians where they can browse and
+                        purchase the medications needed to do their work</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- End FAQ -->
+
+    <!-- Start Products -->
+    <div class="product">
+        <div class="text">
+            <p data-i18n="for_vet">For veterinarian</p>
+            <h2 data-i18n="discover_store">Discover the essential tools you <br> need in our store</h2>
+        </div>
+        <p data-i18n="store_p">Browse our wide range of emergency kits designed to help you deal with any animal illness. <br>
+            From first aid kits to power generators, we have everything you need to ensure the quality <br>
+            of your services and the satisfaction of your customers.</p>
+        <div class="container">
+            <div class="box">
+                <img src="imgs/pexels-pavel-danilyuk-5998515.jpg" alt="">
+                <div class="info">
+                    <h3 data-i18n="syringes">Syringes & needles</h3>
+                    <p data-i18n="supp_n">Suppilier name</p>
+                </div>
+                <button data-i18n="Shop">Shop now </button>
+            </div>
+            <div class="box">
+                <img src="imgs/pexels-tima-miroshnichenko-6234989.jpg" alt="">
+                <div class="info">
+                    <h3 data-i18n="syringes">Syringes & needles</h3>
+                    <p data-i18n="supp_n">Suppilier name</p>
+                </div>
+                <button data-i18n="Shop">Shop now </button>
+            </div>
+            <div class="box">
+                <img src="imgs/pexels-pavel-danilyuk-6753425.jpg" alt="">
+                <div class="info">
+                    <h3 data-i18n="syringes">Syringes & needles</h3>
+                    <p data-i18n="supp_n">Suppilier name</p>
+                </div>
+                <button data-i18n="Shop">Shop now </button>
+            </div>
+            <div class="box">
+                <img src="imgs/pexels-karolina-grabowska-6627704.jpg" alt="">
+                <div class="info">
+                    <h3 data-i18n="syringes">Syringes & needles</h3>
+                    <p data-i18n="supp_n">Suppilier name</p>
+                </div>
+                <button data-i18n="Shop">Shop now </button>
+            </div>
+            <div class="box">
+                <img src="imgs/pexels-kampus-production-8949829.jpg" alt="">
+                <div class="info">
+                    <h3 data-i18n="syringes">Syringes & needles</h3>
+                    <p data-i18n="supp_n">Suppilier name</p>
+                </div>
+                <button data-i18n="Shop">Shop now </button>
+            </div>
+            <div class="box">
+                <img src="imgs/pexels-vlada-karpovich-6755801.jpg" alt="">
+                <div class="info">
+                    <h3 data-i18n="syringes">Syringes & needles</h3>
+                    <p data-i18n="supp_n">Suppilier name</p>
+                </div>
+                <button data-i18n="Shop">Shop now </button>
+            </div>
+            <div class="box">
+                <img src="imgs/pexels-pavel-danilyuk-5998515.jpg" alt="">
+                <div class="info">
+                    <h3 data-i18n="syringes">Syringes & needles</h3>
+                    <p data-i18n="supp_n">Suppilier name</p>
+                </div>
+                <button data-i18n="Shop">Shop now </button>
+            </div>
+            <div class="box">
+                <img src="imgs/pexels-pavel-danilyuk-6753425.jpg" alt="">
+                <div class="info">
+                    <h3 data-i18n="syringes">Syringes & needles</h3>
+                    <p data-i18n="supp_n">Suppilier name</p>
+                </div>
+                <button data-i18n="Shop">Shop now </button>
+            </div>
+        </div>
+        <div class="btn">
+            <button data-i18n="view">View More</button>
+            <a href="" data-i18n="join">Join US</a>
+            <i class="fa-solid fa-angle-right"></i>
+        </div>
+    </div>
+    <!-- End products-->
+
+    <!-- Start contact us -->
+    <div class="contact" id="contact">
+        <div class="txt">
+            <h2 data-i18n="contact">Contact Us</h2>
+            <p data-i18n="have_q">Have a question or need support? Get in touch with us.</p>
+        </div>
+        <div class="container">
+            <div class="text">
+                <div class="box">
+                    <i class="fa-solid fa-envelope"></i>
+                    <h3 data-i18n="email">Email</h3>
+                    <p data-i18n="email_p">Send us an email</p>
+                    <a href="#">farmvet.contact@gmail.com</a>
+                </div>
+                <div class="box">
+                    <i class="fa-solid fa-phone"></i>
+                    <h3 data-i18n="phone">Phone</h3>
+                    <p data-i18n="phone_p">Call us for assistance</p>
+                    <span>+213 665522690 /+213 659312822</span>
+                </div>
+                <div class="box">
+                    <i class="fa-solid fa-location-dot"></i>
+                    <h3 data-i18n="office">Office</h3>
+                    <p data-i18n="office_p">Sidi bel Abbes, Sidi Bel abbes.</p>
+                    <a class="special" href="https://maps.app.goo.gl/nuAKqv5sBxDDWSwj9" data-i18n="direction">Get Direction</a>
+                </div>
+            </div>
+            <div class="location">
+                <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d104321.40340690903!2d-0.5489890356952011!3d35.20537653754212!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd7f0030b5f78f73%3A0x24600b519acfdc29!2z2LPZitiv2Yog2KjZhNi52KjYp9iz4oCO!5e0!3m2!1sar!2sdz!4v1707491122839!5m2!1sar!2sdz"
+                    width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+                    referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+        </div>
+    </div>
+    <!-- End contact us -->
+
+    <!-- Start footer-->
+    <div class="footer">
+        <div class="container">
+            <div class="logo">
+                <img src="imgs/Farmvetlogo(1).jpg" alt="">
+            </div>
+            <div class="copyright">
+                <p>&copy; 2024 Farmvet. All right reserved</p>
+            </div>
+        </div>
+    </div>
+    <!-- End footer-->
+
+
+    <script>
+        // JavaScript to dynamically switch photos based on screen size
+        window.addEventListener('resize', function () {
+            if (window.innerWidth >= 767) {
+                // Large media screen
+                document.getElementById('img1').style.display = 'block';
+                document.getElementById('img2').style.display = 'none';
+            } else {
+                // Small media screen
+                document.getElementById('img1').style.display = 'none';
+                document.getElementById('img2').style.display = 'block';
+            }
+        });
+
+        // Initial check on page load
+        if (window.innerWidth >= 767) {
+            document.getElementById('img1').style.display = 'block';
+            document.getElementById('img2').style.display = 'none';
+        } else {
+            document.getElementById('img1').style.display = 'none';
+            document.getElementById('img2').style.display = 'block';
+        }
+
+        
+    </script>
+    <script src="js/script.js"></script>
+    
+</body>
+
+</html>

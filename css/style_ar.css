@@ -1,0 +1,27 @@
+/* Start Variables */
+:root {
+    --main-color: #22c55e;
+    --main-alt-color: #188a5c;
+    --theered-color: #c59522;
+    --white-color: white;
+    --forp-color: #777;
+    --main-transition: 0.3s;
+    --section-padding: 100px;
+}
+/* End Variables */
+body {
+    direction: rtl;
+}
+
+@media(max-width: 767px){
+    .header .container {
+        direction: ltr;
+        left: 160px;
+        width: 100%;
+    }
+    .p1 .container .text h2 {
+        border-right: 3px solid var(--theered-color);
+        border-left: 0;
+        padding-right: 20px;
+    }
+}
